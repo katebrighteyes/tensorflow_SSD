@@ -12,9 +12,24 @@ cd
 
 git clone https://github.com/katebrighteyes/tensorflow_SSD
 
+cd tensorflow_SSD
+
+chmod 777 *.sh
+
+# 1-0 start settings & VENV
+
+./startSetting.sh
+
+cd ~/tf_ssd
+
+source venvssd/bin/activate
+
+
 # 2-0 install model and check
 
-cp ~/tensorflow_SSD/prepare.sh ./
+## You must do this after activate venv !!
+
+cp ~/tensorflow_SSD/2_prepare.sh ./
 
 chmod 777 prepare.sh
 
