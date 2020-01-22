@@ -38,6 +38,8 @@ cp ~/tensorflow_SSD/2_prepare.sh ./
 
 # 3-2 tfrecord 준비
 
+cd ~/tf_ssd
+
 sudo ls /media/sf_SharedVBImage/ex/
 
 sudo cp /media/sf_SharedVBImage/ex/tfrecord.zip ./
