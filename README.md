@@ -57,7 +57,7 @@ mkdir ~/tf_ssd/tod/save_models/
 
 mkdir ~/tf_ssd/tod/save_models/coco_test
 
-
+# 바로 트레이닝을 할때는 3-4 아니면 다시 시작할때는 3-5
 # 3-4 train
 
 cd ~/tf_ssd/tod/train_models/research
@@ -68,7 +68,7 @@ cp ~/tensorflow_SSD/3_train_ex.sh ./
 
 -------------------------------------------------
 
-# 다시 트레이닝을 할때
+# 3-5 다시 트레이닝을 할때
 
 ## VENV 상태가 아니라면 active 부터
 
@@ -95,6 +95,16 @@ gedit 6_retrain.sh
 chmod 777 6_retrain.sh
 
 ./6_retrain.sh
+
+# 3-7 Export pb
+
+gedit 7_export.sh
+
+## 7_export.sh 복사해넣고 저장 
+
+chmod 777 7_export.sh
+
+./7_export.sh
 
 
 
