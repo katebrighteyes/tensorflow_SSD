@@ -66,3 +66,38 @@ cp ~/tensorflow_SSD/3_train_ex.sh ./
 
 ./3_train_ex.sh
 
+-------------------------------------------------
+
+# 다시 트레이닝을 할때
+
+## VENV 상태가 아니라면 active 부터
+
+source ./venvssd/bin/activate
+
+## ~/tf_ssd/tod/save_models/coco_test 폴더에 파일이 있는지 확인 !! 
+
+## 파일탐색기로 확인 후 파일이 있으면 삭제 혹은 백업
+
+cd ~/tf_ssd/tod/train_models/research
+
+export PYTHONPATH=$PYTHONPATH:/home/opencv-mds/tf_ssd/tod/train_models/research:/home/opencv-mds/tf_ssd/tod/train_models/research/slim
+
+protoc object_detection/protos/*.proto --python_out=.
+
+python object_detection/builders/model_builder_test.py
+
+## OK 확인 !!
+
+gedit 6_retrain.sh
+
+## 3_train_ex.sh 의 7 ~ 21 line 복사해넣고 저장 
+
+chmod 777 6_retrain.sh
+
+./6_retrain.sh
+
+
+
+
+
+
