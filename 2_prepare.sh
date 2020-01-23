@@ -1,4 +1,4 @@
-pip install tensorflow==1.12.0 Cython contextlib2 matplotlib pillow lxml
+pip install tensorflow==1.14.0 Cython contextlib2 matplotlib pillow lxml
 mkdir tod
 cd tod
 git clone https://github.com/tensorflow/models.git
